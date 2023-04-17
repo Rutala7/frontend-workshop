@@ -1,0 +1,12 @@
+<p>filter-posts works!</p>
+
+<fieldset>
+  <form [formGroup]="filterForm" (submit)="submit()">
+    <legend>Filter Posts</legend>
+    <div>
+      <label for="filter">Title to filter</label>
+      <input type="text" formControlName="filter" id="filter" value="" />
+    </div>
+    <button type="submit">Filter</button>
+  </form>
+</fieldset>

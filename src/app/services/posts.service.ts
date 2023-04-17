@@ -15,4 +15,12 @@ export class PostsService {
   findPostsByTitle(title: string) {
     return this.httpClient.get<Post[]>(`/api/posts?title=${title}`);
   }
+
+  getPosts() {
+    return this.httpClient.get<Post[]>('/api/posts');
+  }
+
+  getSinglePost(id: string) {
+    return this.httpClient.get<Post>(`/api/posts/${id}`);
+  }
 }
